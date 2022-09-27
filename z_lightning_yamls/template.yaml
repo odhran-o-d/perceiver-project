@@ -1,0 +1,49 @@
+# sweep.yaml
+program: perceiver_baseline_test.py
+method: grid
+entity: oatml_tab
+project:
+metric:
+ name: val_accuarcy
+ goal: maximise
+
+
+parameters:
+  dataset:
+    values: []
+  model_type:
+    values: []
+  batch_size:
+    values: []
+  optimizer:
+    values: []
+  loss_type:
+    values: []
+  dropout:
+    values: []
+  lr:
+    values: []
+  layers:
+    values: []
+  num_heads:
+    values: []
+  head_dim:
+    values: []
+  embedding_dim:
+    values: []
+  num_latents:
+    values: []
+  per_item_embed:
+    values: []
+  feature_embed:
+    values: []
+  time_embed:
+    values: []
+  undersample:
+    values: []
+  use_fourrier:
+    values: []
+  no_embedding:
+    values: []
+  use_16_bit:
+    values: []

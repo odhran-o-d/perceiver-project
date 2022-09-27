@@ -1,0 +1,51 @@
+# sweep.yaml
+program: perceiver_baseline_test.py
+method: grid
+entity: oatml_tab
+project: loss_headdim_numlatents_layers_16bit_3
+metric:
+ name: val_accuarcy
+ goal: maximise
+
+
+parameters:
+  # dataset:
+  #   values: []
+  model-type:
+    values: ['Perceiver']
+  optimizer:
+    values: ['Lookahead-Lamb']
+  loss-type:
+    values: ['MSE', 'NLL', 'Weighted-CE']
+  dropout:
+    values: [0.1]
+  batch-size:
+    values: [32]
+  max-epochs:
+    values: [100]
+  lr:
+    values: [0.001]
+  layers:
+    values: [8,16]
+  # num-heads:
+  #   values: []
+  head-dim:
+    values: [32, 64, 128]
+  # embedding-dim:
+  #   values: []
+  num-latents:
+    values: [1, 64, 128, 256, 512]
+  # per-item-embed:
+  #   values: []
+  # feature-embed:
+  #   values: []
+  # time-embed:
+  #   values: []
+  # undersample:
+  #   values: []
+  # use-fourrier:
+  #   values: []
+  # no-embedding:
+  #   values: []
+  use-16-bit:
+    values: [1]

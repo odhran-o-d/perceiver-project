@@ -1,0 +1,51 @@
+# sweep.yaml
+program: perceiver_baseline_test.py
+method: grid
+entity: oatml_tab
+project: physiology_data_test_2 
+metric:
+ name: val_accuarcy
+ goal: maximise
+
+
+parameters:
+  dev-run:
+    values: [0]
+  dataset:
+    values: ['mimic-pheno'] # mimic, mimic-pheno, uci
+  model-type:
+    values: ['Perceiver'] # Perceiver, Perceiver-io
+  batch-size:
+    values: [32]
+  optimizer:
+    values: ['Lookahead-Lamb']
+  loss-type:
+    values: ['multi-label-CE']
+  dropout:
+    values: [0.1]
+  lr:
+    values: [0.001]
+  layers:
+    values: [8]
+  # num-heads:
+  #   values: []
+  head-dim:
+    values: [64]
+  # embedding-dim:
+  #   values: []
+  num-latents:
+    values: [256]
+  # per-item-embed:
+  #   values: []
+  # feature-embed:
+  #   values: []
+  # time-embed:
+  #   values: []
+  # undersample:
+  #   values: []
+  # use-fourrier:
+  #   values: []
+  # no-embedding:
+  #   values: []
+  use-16-bit:
+    values: [1]

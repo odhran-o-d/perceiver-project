@@ -1,0 +1,1 @@
+from ttnn.model.ttnn import TTNNModel
